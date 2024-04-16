@@ -20,6 +20,7 @@ header {
     width: 100%;
     height: 60px;
     position: fixed;
+    z-index: 99999999;
 }
 
 .nav-black{
@@ -28,65 +29,40 @@ header {
     top: 0;
     left: 0;
     height: 60px;
-    min-width: 456px;
+    width: 100%;
     background-color: #000;
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
-    border-bottom-right-radius: 20px;
+    padding: 10px 50px;
 }
 .nav-black .logo {
     color: #f5d94a;
 }
-.menuDiv {
-    position: relative;
-    top: 40px;
-    left: 0;
-    height: 400px;
-    max-width: 456px;
-    background-color: #000;
-    color: #fff;
+
+.deskmenus {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding-left: 20px;
-    padding-bottom: 20px;
-    border-bottom-right-radius: 20px;
-    opacity: 0;
-}
-.menuDiv .menus {
-    padding-top: 30px;
+    align-items: center;
+    justify-content: center;
     list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    gap: 35px;
 }
-.menuDiv .menus li a {
+.deskmenus li a {
     text-decoration: none;
     color: #fff;
-    transition: all 0.3s linear;
-}
-.menuDiv .menus li a:hover {
-    text-decoration: none;
-    color: #9f9f9f;
-    transform: translate(-15);
 }
 
 .nav-black h3 {
     font-weight: 400;
 }
-.nav-black .menu {
-    width: 30px;
-    color: #fff;
-}
+
 
 .nav-black .menu i {
    font-size: 28px;
     color: #fff;
 }
+
 
 
 
@@ -97,33 +73,61 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 50px;;
+    padding-right: 50px;;
 
 }
 #page1 .left {
  width: 50%;
 }
 #page1 .left h5 {
-    box-shadow: 0px 0px 0px 4px rgba(255, 223, 39, 0.5);
+    box-shadow: 0px 0px 0px 4px rgba(247, 239, 25, 0.1);
     max-width: 16rem;
     border-radius: 50px;
     padding: 8px 12px;
-    border: 1px solid rgba(255, 255, 255, .5);
+    border: 1px solid rgba(0, 0, 0, 0.5);
     font-weight: 500;
     text-align: center;
 }
  #page1 .left h1 {
-  font-size: 3.75rem;
-  margin-top: 32px;
-  line-height: 1;
+  font-size: 54px;
+  margin-top: 20px;
+  line-height: 1.2;
     
 }
 
 #page1 .left p {
     font-size: 1.125rem;
     line-height: 1.75rem;  
-    margin-top: 32px;
+    margin-top: 20px;
+}
+.btn-group {
+    margin-top: 20px;
+    display: flex;
+    align-items: start;
+    gap: 20px;
+}
+.btn-group button {
+    padding: 12px 25px;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    align-items: center;
+    padding: .88235rem 1.47059rem;
+    background-color: #000;
+    border-radius: 4.70588rem;
+    color: #fff;
+    line-height: 1;
+    letter-spacing: normal;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1;
+    border: none;
+}
+.btn-group .enroll {
+    background: transparent;
+    border: 1px solid #000;
+    color: #000;
+    font-weight: 500;
 }
 
 
@@ -141,9 +145,123 @@ header {
 
 
 
+
+
+
 #page2 {
     width: 100%;
     height: 100vh;
     background: black;
 }
 
+
+
+
+
+
+@media screen and (min-width: 768px) {
+    .none {
+        display: none;
+    }
+    .menuDiv {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menuDiv {
+        position: relative;
+        top: 40px;
+        left: 0;
+        height: 400px;
+        max-width: 456px;
+        background-color: #000;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding-left: 20px;
+        padding-bottom: 20px;
+        border-bottom-right-radius: 20px;
+        opacity: 0;
+    }
+    .menuDiv .menus {
+        padding-top: 30px;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .menuDiv .menus li a {
+        text-decoration: none;
+        color: #fff;
+        transition: all 0.3s linear;
+    }
+    .menuDiv .menus li a:hover {
+        text-decoration: none;
+        color: #9f9f9f;
+        transform: translate(-15);
+    }
+  }
+
+
+
+  /* Copyright section */
+.copyright {
+    /* Your styles here */
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: #000000;
+    padding: 20px 50px;
+    color: #fff;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.footer-column {
+    text-align: left;
+    padding-bottom: 30px;
+}
+.footer-column h4{
+   padding-top: 30px;
+   padding-bottom: 30px;
+   color: #f5d94a;
+}
+.footer-column ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.footer-column ul li a {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+.full {
+    text-align: center;
+    width: 100%;
+    border-top: 1px solid #f5d94a;
+    padding-top: 10px;
+}
+@media screen and (max-width: 1040px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* Responsive for Tableload mode */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+}
